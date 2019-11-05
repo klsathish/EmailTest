@@ -1,0 +1,28 @@
+<div class="formgroup row">
+    <div class="col-xs-2">
+<a class="btn btn-link" href="javascript:void(0);" (click)="btnCompose()">Compose</a>
+
+<a class="btn btn-link" href="javascript:void(0);" (click)="logout()">Logout</a>
+
+
+
+<ul class="emailLinks">
+    <li> <a  href="javascript:void(0);" (click)="btnInbox()">Inbox</a> </li>
+    <li> <a  href="javascript:void(0);" (click)="btnSentMail()">SentMail</a> </li>
+    <li> <a  href="javascript:void(0);" (click)="btnDraft()">Draft</a> </li>
+    <li> <a  href="javascript:void(0);" (click)="btnTrash()">Trash</a> </li>
+</ul>
+</div>
+<div class="col-xs-9">
+    <br>
+    <br>
+    <div class="formgroup container">
+        <app-inbox *ngIf="isVisibleInbox"></app-inbox>
+        <app-compose *ngIf="isVisibleCompose"></app-compose>
+        <app-draft *ngIf="isVisibleDraft"></app-draft>
+        <app-sent-mail *ngIf="isVisibleSentMail"></app-sent-mail>
+        <app-trash *ngIf="isVisibleTrash"></app-trash>
+        <app-view-mail *ngIf="isVisibleViewMail"></app-view-mail>
+    </div>
+</div>
+</div>

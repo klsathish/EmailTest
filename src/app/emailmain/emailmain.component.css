@@ -1,0 +1,19 @@
+.emailLinks a{
+    padding:10px 20px;
+    cursor: pointer;
+    user-select: none;
+    text-decoration:none;
+}
+.emailLinks{
+    list-style-type: none;
+}
+.emailLinks a:hover{
+    color:#448aff;
+    background-color: #ddeaff;
+    cursor: pointer;
+    user-select: none;
+    text-decoration:none;
+}
+.emailLinks li{
+    padding:10px 20px;
+}

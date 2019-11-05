@@ -1,0 +1,23 @@
+<div class="form-group" >
+    <!-- <ul class="mailDetailLink">
+        <li *ngFor="let item of emailList" [ngClass]="{'text-danger': item.IsRead}">
+           <a href="javascript:void(0);" >-{{item.Name}} -{{item.FromEmail}}</a>
+        </li>
+    </ul> -->
+    <table class="table table-hover">
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of emailList" [ngClass]="{'text-danger': item.IsRead}" (click)="btnCompose(item.Id)">
+                <td>{{item.Id}}</td>
+                <td>{{item.Name}}</td>
+                <td>{{item.FromEmail}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+

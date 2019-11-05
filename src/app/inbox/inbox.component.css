@@ -1,0 +1,19 @@
+.mailDetailLink a{
+    padding:10px 20px;
+    cursor: pointer;
+    user-select: none;
+    text-decoration:none;
+}
+.mailDetailLink{
+    list-style-type: none;
+}
+.mailDetailLink a:hover{
+    color:#448aff;
+    background-color: #ddeaff;
+    cursor: pointer;
+    user-select: none;
+    text-decoration:none;
+}
+.mailDetailLink li{
+    padding:10px 20px;
+}

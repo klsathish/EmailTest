@@ -1,0 +1,43 @@
+<form [formGroup]="mailForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="To">To</label>
+        <input type="text" formControlName="To" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.To.errors }" />
+        <div *ngIf="submitted && f.To.errors" class="invalid-feedback">
+            <div *ngIf="f.To.errors.required">To is required</div>
+            <div *ngIf="f.To.errors.email">To is not ah email</div>
+        </div>
+    </div>
+  
+    <div class="form-group">
+        <label for="CC">CC</label>
+        <input type="text" formControlName="CC" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.CC.errors }" />
+        <div *ngIf="submitted && f.CC.errors" class="invalid-feedback">
+            <div *ngIf="f.CC.errors.required">CC is required</div>
+            <div *ngIf="f.CC.errors.email">CC is not ah email</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Subject">Subject</label>
+        <input type="text" formControlName="Subject" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Subject.errors }" />
+        <div *ngIf="submitted && f.Subject.errors" class="invalid-feedback">
+            <div *ngIf="f.Subject.errors.required">Subject is required</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Body">Body</label>
+        <input type="text" formControlName="Body" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Body.errors }" />
+        <div *ngIf="submitted && f.Body.errors" class="invalid-feedback">
+            <div *ngIf="f.Body.errors.required">Body is required</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+
+      <button class="btn btn-primary">
+          Compose Mail
+      </button>
+  </div>
+
+  </form> 
