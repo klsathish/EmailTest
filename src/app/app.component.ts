@@ -25,7 +25,6 @@ export class AppComponent {
     private rte:Router
     ) {
     this.currentURL = location.path();
-
     }
 
   ngOnInit(){
